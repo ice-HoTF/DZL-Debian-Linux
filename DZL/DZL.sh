@@ -127,7 +127,7 @@ if [[ -z "$rlist" ]]; then
 
 fi
 
-echo "Select Favorite to Delete:"
+echo "Select Number To Delete:"
 select rfile in $rlist
 do
     if [ -n "$rfile" ]; then
