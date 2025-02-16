@@ -73,7 +73,7 @@ if [[ -z "$list" ]]; then
     exit
 fi
 
-echo "Please Select A Number:"
+echo "Select By Number:"
 select file in $list
 do
     if [ -n "$file" ]; then
@@ -127,7 +127,7 @@ if [[ -z "$rlist" ]]; then
 
 fi
 
-echo "Select Number To Delete:"
+echo "Select By Number To Delete:"
 select rfile in $rlist
 do
     if [ -n "$rfile" ]; then
