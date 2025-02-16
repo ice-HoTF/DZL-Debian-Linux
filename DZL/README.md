@@ -1,7 +1,7 @@
-# DayZ_Auto_Mod_Launcher_For_Linux 
+# DZL 
 \
 \
- **Fixed and updated 27/10-24**
+ **Beta released 16/02/2025**
 \
 \
 Author of the original code: DAYZ Linux CLI LAUNCHER by Bastimeyer
@@ -10,7 +10,7 @@ Author of the original code: DAYZ Linux CLI LAUNCHER by Bastimeyer
 Rewritten and modded by: ice_hotf
 \
 \
-Tested with Debian 11 and 12.
+Tested with Debian 12.
 \
 \
 \
@@ -33,64 +33,15 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Add script 'DayZ_Auto_Mod_Launcher.sh' to your 'home' folder.
+1: Add folder 'DZL' to your 'home' folder.
 \
 \
-2: Run 'bash DayZ_Auto_Mod_Launcher.sh' in the terminal.
+2: Open 'DZL' Folder and Run 'bash DZL.sh' in the terminal.
 \
 \
-3: Choose between two choices:
+3: Follow Instructions in the Terminal!
 \
 \
-3_1: Normal Mod Setup (Type/Paste IP:Port, Query Port and Username directly into the terminal when it asks for user input)
-\
-\
-3_2: Static Mod Setup (Set IP:Port, Query Port and Username in the script file. (Line 66 in the script)
-\
-\
-4: Wait for mods to download and click enter.
-\
-\
-5: Launch DayZ with mods and Join Server.
-\
-\
-\
-**Screenshots**:
-\
-\
-\
-Normal Mod Setup:
-\
-\
-![1](https://github.com/user-attachments/assets/851469a2-3bab-492f-9c53-7f6a426853cf)
-\
-\
-\
-Static Mod Setup:
-\
-\
-![2](https://github.com/user-attachments/assets/9de25c1f-34d7-45d6-bbbe-bd1cf2d6cba0)
-\
-\
-\
-Mods Menu And Save Menu:
-\
-\
-![menu](https://github.com/user-attachments/assets/899bdf04-9f58-4a7d-af13-609427e5acb1)
-\
-\
-\
-Mods Menu:
-\
-\
-![mods](https://github.com/user-attachments/assets/ed9f5240-0c54-43ba-9e5e-41055e3e847d)
-\
-\
-\
-Save Menu:
-\
-\
-![save](https://github.com/user-attachments/assets/137f73de-1f1b-4d4e-8b21-5790c012bdb1)
 \
 \
 \
