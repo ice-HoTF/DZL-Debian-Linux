@@ -43,6 +43,8 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
+Join Server:
+![join_server_1](https://github.com/user-attachments/assets/6ec5261a-aed7-4f57-ad87-721ffee2bd58)
 \
 \
 \
