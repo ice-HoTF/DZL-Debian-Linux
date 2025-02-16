@@ -1,4 +1,4 @@
-# DZL 
+# DZL (DayZ Launcher for Modded Servers) 
 \
  **Beta released 16/02/2025**
 \
