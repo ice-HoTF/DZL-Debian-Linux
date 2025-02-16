@@ -73,7 +73,7 @@ if [[ -z "$list" ]]; then
     exit
 fi
 
-echo "Please Select Server:"
+echo "Please Select A Number:"
 select file in $list
 do
     if [ -n "$file" ]; then
