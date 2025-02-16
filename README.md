@@ -53,7 +53,17 @@ Add Favorite:
 \
 \
 ![add_favorite](https://github.com/user-attachments/assets/bda435ef-ce73-4eac-9d0e-c721d347d628)
+\
+\
+Join Favorite:
+\
+\
 ![join_favorite](https://github.com/user-attachments/assets/419abb14-c5ad-4e40-92d9-0454825296f9)
+\
+\
+Remove Favorite:
+\
+\
 ![remove_favorite](https://github.com/user-attachments/assets/30ff3c24-fd89-4919-a65e-d58349de3783)
 \
 \
