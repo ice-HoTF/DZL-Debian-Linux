@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=DZL
+Icon=/home/$USER/DZL/dzl.png
+Exec=bash -c '/home/$USER/DZL/DZL.sh;$SHELL'
+Terminal=true
+Categories=Application;
