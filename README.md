@@ -4,10 +4,7 @@
  **Beta released 16/02/2025**
 \
 \
-Author of the original code: DAYZ Linux CLI LAUNCHER by Bastimeyer
-\
-\
-Rewritten and modded by: ice_hotf
+By: ice_hotf
 \
 \
 Tested with Debian 12.
