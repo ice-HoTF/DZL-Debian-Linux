@@ -75,6 +75,9 @@ Remove All Mods:
 ![remove_all_mods](https://github.com/user-attachments/assets/54d2fa7f-20fa-495e-9d99-3ac86cbec6f2)
 \
 \
+Desktop Entry: Add 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop.
+\
+\
 FAQ:
 I can't join the server:
 - Restart Steam if you can't join the server and try again. 
