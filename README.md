@@ -110,3 +110,15 @@ I can't join the server:
 \
 \
 \
+Dependencies:
+\
+\
+gawk
+\
+\
+curl
+\
+\
+jq
+\
+\
