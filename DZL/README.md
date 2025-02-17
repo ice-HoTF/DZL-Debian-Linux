@@ -37,7 +37,8 @@ jq
 \
 **About This Script:**
 \
-This script will wait for user input and automatically identify missing mods, download them and launch DayZ with the mods. 
+\
+This script will identify missing mods, download them and launch DayZ with the mods. 
 This script will also allow you to delete mods and save Favorite Servers.
 Just follow the instructions in the terminal window and that's it.
 \
