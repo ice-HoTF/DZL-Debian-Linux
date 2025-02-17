@@ -1,4 +1,4 @@
-# DZL (DayZ Launcher for Modded Servers) 
+# DZL 
 \
  **Beta released 16/02/2025**
 \
@@ -75,12 +75,28 @@ Remove All Mods:
 ![remove_all_mods](https://github.com/user-attachments/assets/54d2fa7f-20fa-495e-9d99-3ac86cbec6f2)
 \
 \
+\
+\
+![dzl](https://github.com/user-attachments/assets/24a04856-76ee-494d-a0a3-9f7116fb1f3e)
+\
+\
+Add DZL as a Application Entry and Open it as an Application: 
+\
+\
+Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop. 
+\
+\
+You can do this in the Terminal like this:
+cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
+(Remember to edit the icon path in DZL.desktop: Replace "Your_Username" with your username..
+\
+\
+\
+\
 FAQ:
 I can't join the server:
 - Restart Steam if you can't join the server and try again. 
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
-\
-\
 \
 \
 \
