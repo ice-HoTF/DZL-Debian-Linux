@@ -75,9 +75,18 @@ Remove All Mods:
 ![remove_all_mods](https://github.com/user-attachments/assets/54d2fa7f-20fa-495e-9d99-3ac86cbec6f2)
 \
 \
+\
+\
 Add DZL as a Application Entry and Open it as an Application: 
 \
-Add 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop.
+\
+Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop. 
+\
+\
+You can do this in the Terminal like this:
+cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
+\
+\
 \
 \
 FAQ:
