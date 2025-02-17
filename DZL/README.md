@@ -60,8 +60,7 @@ jq
 \
 \
 3: Run DZL by Opening the Application Menu Shortcut <DZL>
-\
-   or Terminal Command: bash /home/$USER/DZL/DZL.sh
+\  or Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
 \
