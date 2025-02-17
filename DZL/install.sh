@@ -18,7 +18,7 @@ echo ""
 echo ""
 ### Give user ownership to .png icon ###
 echo "Taking Ownership of dzl.png."
-sudo chmod +x /home/$USER/DZL/dzl.png &
+sudo chmod +x /home/$USER/DZL/./*
 echo ""
 echo ""
 ### Copy DZL.desktop file to your application Directory ###
