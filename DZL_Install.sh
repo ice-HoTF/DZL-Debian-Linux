@@ -1,7 +1,6 @@
 ### DZL Installer ### 
-echo ""
-read -p $'\n
-Move the DZL Folder to your /home/$USER Directory and Press Enter to Continue' foo
+echo "Moving 'DZL Folder' to /home/$USER/"
+cp /home/$USER/DZL-Beta-main/DZL/ /home/$USER/
 echo ""
 echo ""
 echo "Installing Dependencies:"
