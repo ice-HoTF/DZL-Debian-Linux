@@ -98,7 +98,7 @@ https://www.youtube.com/watch?v=bssSaxZ6hS4
 ![remove_favorite](https://github.com/user-attachments/assets/30ff3c24-fd89-4919-a65e-d58349de3783)
 \
 \
-**Remove From Specific Server:*
+**Remove From Specific Server:**
 \
 \
 ![remode_mods_this_server](https://github.com/user-attachments/assets/46a232fd-ed2b-4123-9df6-413d5135fd88)
