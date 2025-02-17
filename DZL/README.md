@@ -23,12 +23,16 @@ Replace it with yours.
 \
 This script only works with the official steam package: https://wiki.debian.org/Steam
 \
+\
 **Dependencies:**
+\
 gawk
 \
 curl
 \
 jq
+\
+\
 \
 \
 **About This Script:**
