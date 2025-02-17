@@ -29,13 +29,13 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Run DZL_Install.sh.
+1: Extract 'DZL_Beta_main.zip' to your '/home/$USER' Directory.
 \
 \
-2: Run bash /home/$USER/DZL/DZL.sh in the Terminal and Follow The Instructions.
+2: Run 'sh /home/$USER/DZL/DZL_Installer.sh' in the terminal.
 \
 \
-3: Enjoy.
+3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
 \
