@@ -29,13 +29,13 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Add folder 'DZL' to your 'home' folder.
+1: Run DZL_Install.sh.
 \
 \
-2: Open 'DZL' Folder and Run 'install.sh' in the terminal.
+2: Run bash /home/$USER/DZL/DZL.sh in the Terminal and Follow The Instructions.
 \
 \
-3: Run bash /home/$USER/DZL/DZL.sh in the Terminal and Follow The Instructions.
+3: Enjoy.
 \
 \
 \
