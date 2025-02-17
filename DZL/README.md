@@ -77,6 +77,9 @@ Remove All Mods:
 \
 \
 \
+![dzl](https://github.com/user-attachments/assets/24a04856-76ee-494d-a0a3-9f7116fb1f3e)
+\
+\
 Add DZL as a Application Entry and Open it as an Application: 
 \
 \
