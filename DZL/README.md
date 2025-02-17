@@ -59,8 +59,7 @@ jq
    sh /home/$USER/DZL-Beta-Linux-main/install_DZL.sh
 \
 \
-3: Run DZL by Opening the Application Menu Shortcut <DZL>
-\  or Terminal Command: bash /home/$USER/DZL/DZL.sh
+3: Run DZL by Opening the Application Menu Shortcut <DZL> or Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
 \
