@@ -195,7 +195,6 @@ I can't join the server:
 **Add DZL as a Application Entry and Open it as an Application** 
 \
 \
-\
 This is automatically done through the <install_DZL.sh> script, but this is how you do it manually:
 \
 \
