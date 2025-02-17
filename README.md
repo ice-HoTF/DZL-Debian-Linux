@@ -64,7 +64,7 @@ jq
 \
 \
 **Video: How To Setup and Launch DZL:**
-https://youtu.be/RQ1DCVzzKxw
+https://www.youtube.com/watch?v=bssSaxZ6hS4
 \
 \
 \
