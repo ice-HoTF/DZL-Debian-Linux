@@ -88,6 +88,7 @@ Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop
 \
 You can do this in the Terminal like this:
 cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
+(Remember to edit the icon path in DZL.desktop: Replace "Your_Username" with your username..
 \
 \
 \
