@@ -89,13 +89,15 @@ Remove All Mods:
 \
 Add DZL as a Application Entry and Open it as an Application: 
 \
+This is automatically done through the 'install_DZL.sh' script, but this is how to do it manually:
 \
-Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop. 
 \
-\
-You can do this in the Terminal like this:
+1: Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and in the Terminal like this:
 cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
-(Remember to edit the icon path in DZL.desktop: Replace "Your_Username" with your username..
+\
+\
+2: Copy the .png-icon to the '/usr/share/icons' folder in the Terminal like this:
+sudo cp /home/$USER/DZL-Beta-main/DZL/dzl.png /usr/share/icons/
 \
 \
 \
