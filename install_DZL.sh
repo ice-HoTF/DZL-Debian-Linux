@@ -26,12 +26,13 @@ cp /home/$USER/DZL-Beta-main/DZL/DZL.desktop /home/$USER/.local/share/applicatio
 echo "DZL.desktop was copied to '/home/$USER/.local/share/applications/' and should be available in the application menu."
 echo ""
 echo ""
-### Copy dzl.png file to your 'Pictures' Directory ###
-cp /home/$USER/DZL-Beta-main/DZL/dzl.png /home/$USER/Pictures/
-echo "Application Icon copied to 'Pictures'. Make sure to change the 'Icon Path' in the DZL.desktop file."
+### Copy dzl.png file to /usr/share/icons ###
+cp /home/$USER/DZL-Beta-main/DZL/dzl.png /usr/share/icons/
+echo "Application Icon copied to 'usr/share/icons'"
 echo ""
 echo ""
 ### Copy Icon to /usr/share/icons/
 sudo cp /home/ice/Pictures/dzl.png /usr/share/icons/
 echo ""
 echo ""
+echo "All Done! Launch DZL by Using the Application Menu Entry or through Terminal: bash /home/$USER/DZL/DZL.sh"
