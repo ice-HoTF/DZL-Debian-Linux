@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ### DZL Installer ### 
 echo "Copying 'DZL Folder' to /home/$USER/"
 cp -R /home/$USER/DZL-Beta-main/DZL/ /home/$USER/
