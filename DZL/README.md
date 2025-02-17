@@ -1,4 +1,4 @@
-# DZL 
+# DZL - A Simple DayZ Mod Launcher for Linux 
 \
  **Beta released 16/02/2025**
 \
