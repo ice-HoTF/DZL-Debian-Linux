@@ -1,5 +1,5 @@
 ### DZL Installer ### 
-echo "Moving 'DZL Folder' to /home/$USER/"
+echo "Copying 'DZL Folder' to /home/$USER/"
 cp -R /home/$USER/DZL-Beta-main/DZL/ /home/$USER/
 echo ""
 echo ""
@@ -18,6 +18,7 @@ echo ""
 ### Give user ownership to .png icon ###
 echo "Taking Ownership of the DZL Folder Contents."
 sudo chmod +x /home/$USER/DZL-Beta-main/DZL/./*
+sudo chmod +x /home/$USER/DZL/./*
 echo ""
 echo ""
 ### Copy DZL.desktop file to your application Directory ###
