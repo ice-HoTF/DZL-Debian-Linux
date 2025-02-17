@@ -354,8 +354,7 @@ read -s -n1 -p $'
  1) Join Server\n
  2) Add To Favorites\n
  3) Edit Server Mods (For This Server Only)\n
- 4) Main Menu\n 
- 5) Quit
+ 4) Quit
 \n' number
 done
 case $number in
@@ -374,9 +373,6 @@ case $number in
     submenu1
     ;;    
     [4])
-    startmenu
-    ;;
-    [5])
     exit
     ;;
         *)
