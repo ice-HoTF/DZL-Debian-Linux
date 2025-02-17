@@ -1,4 +1,4 @@
-# DZL - A Simple DayZ Mod Launcher for Linux 
+# DZL - A Simple DayZ Mod Launcher for Linux
 \
  **Beta released 16/02/2025**
 \
@@ -32,10 +32,17 @@ This script supports modded servers and vanilla servers.
 1: Extract 'DZL_Beta_main.zip' to your '/home/$USER' Directory.
 \
 \
-2: Run 'sh /home/$USER/DZL/DZL_Installer.sh' in the terminal.
+2: Run 'sh /home/$USER/DZL/install_DZL.sh' in the terminal.
 \
 \
 3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
+\
+\
+\
+\
+Video: How To Setup and Launch DZL:
+https://youtu.be/RQ1DCVzzKxw
+\
 \
 \
 \
@@ -82,13 +89,15 @@ Remove All Mods:
 \
 Add DZL as a Application Entry and Open it as an Application: 
 \
+This is automatically done through the 'install_DZL.sh' script, but this is how yoo do it manually:
 \
-Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and refresh desktop. 
 \
-\
-You can do this in the Terminal like this:
+1: Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and in the Terminal like this:
 cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
-(Remember to edit the icon path in DZL.desktop: Replace "Your_Username" with your username..
+\
+\
+2: Copy the .png-icon to the '/usr/share/icons' folder in the Terminal like this:
+sudo cp /home/$USER/DZL-Beta-main/DZL/dzl.png /usr/share/icons/
 \
 \
 \
