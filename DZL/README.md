@@ -6,12 +6,22 @@
 By: ice_hotf
 \
 \
-Tested with Debian 12.
+Supported Distros:
+Tested with Debian 12. 
+\
+\
+Other Distros:
+(The steam path "/home/$USER/.steam/debian-installation/steamapps/" might need to be changed for other distros. Replace it with yours) 
 \
 \
 \
 **FLATPAK STEAM NOT SUPPORTED!**
 This script only works with the official steam package: https://wiki.debian.org/Steam
+\
+**Dependencies:**
+gawk
+curl
+jq
 \
 \
 \
@@ -109,17 +119,5 @@ I can't join the server:
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
 \
 \
-\
-\
-Dependencies:
-\
-\
-gawk
-\
-\
-curl
-\
-\
-jq
 \
 \
