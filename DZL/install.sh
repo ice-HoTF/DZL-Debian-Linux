@@ -1,8 +1,7 @@
 ### DZL Installer ### 
 echo ""
-echo ""
-echo "Before you start: Make sure that the 'DZL' Folder is added to you 'Home/$USER/ Directory"
-# Make sure that the 'DZL' Folder is added to you 'Home/$USER/ Directory'
+read -p $'\n
+Move the DZL Folder to your /home/$USER Directory and Press Enter to Continue' foo
 echo ""
 echo ""
 ### Install Dependencies: ###
