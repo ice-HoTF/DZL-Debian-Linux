@@ -52,7 +52,7 @@ jq
 \
 \
 \
-1: Extract <DZL-Beta-Linux-main.zip> to your </home/$USER> Directory.
+1: Extract <DZL-Beta-Linux-main.zip> to your </home/$USER/> Directory.
 \
 \
 2: Install DZL by running <install_DZL.sh> in the Terminal:
