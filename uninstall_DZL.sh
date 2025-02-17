@@ -1,9 +1,8 @@
 #!/bin/bash
 
 ### Uninstall DZL###
-
-
-cd /home/$USER/
+cd ~
+exec bash
 sudo rm /home/$USER/.local/share/applications/DZL.desktop 
 sudo rm /usr/share/icons/dzl.png
 sudo rm -rf /home/$USER/DZL/
