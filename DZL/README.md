@@ -12,9 +12,10 @@ Tested with Debian 12.
 \
 \
 Other Distros:
-(The steam path "/home/$USER/.steam/debian-installation/steamapps/" might need to be changed for other distros. 
 \
-Replace it with yours) 
+The steam path "/home/$USER/.steam/debian-installation/steamapps/" might need to be changed for other distros. 
+\
+Replace it with yours.
 \
 \
 \
