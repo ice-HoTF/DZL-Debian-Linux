@@ -33,7 +33,7 @@ This script supports modded servers and vanilla servers.
 \
 \
 2: Install DZL by running 'install_DZL.sh' in the Terminal:
-sh /home/$USER/DZL-Beta-Linux-main/install_DZL.sh/ /home/$USER/.
+sh /home/$USER/DZL-Beta-Linux-main/install_DZL.sh/
 \
 \
 3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh.
