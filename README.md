@@ -89,7 +89,7 @@ Remove All Mods:
 \
 Add DZL as a Application Entry and Open it as an Application: 
 \
-This is automatically done through the 'install_DZL.sh' script, but this is how to do it manually:
+This is automatically done through the 'install_DZL.sh' script, but this is how yoo do it manually:
 \
 \
 1: Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and in the Terminal like this:
