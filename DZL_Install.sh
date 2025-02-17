@@ -1,6 +1,6 @@
 ### DZL Installer ### 
 echo "Moving 'DZL Folder' to /home/$USER/"
-cp /home/$USER/DZL-Beta-main/DZL/ /home/$USER/
+cp -R /home/$USER/DZL-Beta-main/DZL/ /home/$USER/
 echo ""
 echo ""
 echo "Installing Dependencies:"
