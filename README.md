@@ -6,21 +6,44 @@
 By: ice_hotf
 \
 \
-Tested with Debian 12.
+Supported Distros:
+\
+Tested with Debian 12. 
+\
+\
+Other Distros:
+\
+The steam path "/home/$USER/.steam/debian-installation/steamapps/" might need to be changed for other distros. 
+\
+Replace it with yours.
 \
 \
 \
 **FLATPAK STEAM NOT SUPPORTED!**
+\
 This script only works with the official steam package: https://wiki.debian.org/Steam
 \
 \
+**Dependencies:**
 \
-This script will wait for user input and automatically identify missing mods, download them and launch DayZ with the mods. 
-This script will also allow you to delete mods and save Favorite Servers.
-Just follow the instructions in the terminal window and that's it.
+gawk
+\
+curl
+\
+jq
 \
 \
-This script supports modded servers and vanilla servers.
+\
+\
+**About This Script:**
+\
+\
+   This script will identify missing mods, download them and launch DayZ with the mods. 
+   This script will also allow you to delete mods and save Favorite Servers.
+   Just follow the instructions in the terminal window and that's it.
+\
+\
+   This script supports modded servers and vanilla servers.
 \
 \
 \
@@ -29,14 +52,14 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Extract 'DZL-Beta-Linux-main.zip' to your '/home/$USER' Directory.
+1: Extract <DZL-Beta-Linux-main.zip> to your </home/$USER/> Directory.
 \
 \
-2: Install DZL by running 'install_DZL.sh' in the Terminal:
-sh /home/$USER/DZL-Beta-Linux-main/install_DZL.sh
+2: Install DZL by running <install_DZL.sh> in the Terminal:
+   sh /home/$USER/DZL-Beta-Linux-main/install_DZL.sh
 \
 \
-3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
+3: Run DZL by Opening the Application Menu Shortcut <DZL> or Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
 \
@@ -90,14 +113,16 @@ Remove All Mods:
 \
 Add DZL as a Application Entry and Open it as an Application: 
 \
-This is automatically done through the 'install_DZL.sh' script, but this is how yoo do it manually:
+This is automatically done through the <install_DZL.sh> script, but this is how you do it manually:
 \
 \
-1: Copy 'DZL.desktop' to /home/$USER/.local/share/applications/ and in the Terminal like this:
+1: Copy <DZL.desktop> to /home/$USER/.local/share/applications/ and in the Terminal:
+\
 cp /home/$USER/DZL-Beta-Linux-main/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
 \
 \
-2: Copy the .png-icon to the '/usr/share/icons' folder in the Terminal like this:
+2: Copy the .png-icon to the </usr/share/icons> folder in the Terminal:
+\
 sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 \
@@ -105,21 +130,9 @@ sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 FAQ:
 I can't join the server:
-- Restart Steam if you can't join the server and try again. 
+- Restart Steam if you can't join the server and try again.
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
 \
 \
-\
-\
-Dependencies:
-\
-\
-gawk
-\
-\
-curl
-\
-\
-jq
 \
 \
