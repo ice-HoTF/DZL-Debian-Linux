@@ -31,3 +31,7 @@ cp /home/$USER/DZL-Beta-main/DZL/dzl.png /home/$USER/Pictures/
 echo "Application Icon copied to 'Pictures'. Make sure to change the 'Icon Path' in the DZL.desktop file."
 echo ""
 echo ""
+### Copy Icon to /usr/share/icons/
+sudo cp /home/ice/Pictures/dzl.png /usr/share/icons/
+echo ""
+echo ""
