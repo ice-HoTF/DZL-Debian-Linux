@@ -39,7 +39,7 @@ This script supports modded servers and vanilla servers.
 \
 \
 Video: How To Setup and Launch DZL:
-https://github.com/user-attachments/assets/f605976b-410e-4446-812d-945717f9bc24
+https://youtu.be/RQ1DCVzzKxw
 \
 \
 Join Server:
