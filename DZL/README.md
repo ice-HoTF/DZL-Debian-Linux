@@ -120,11 +120,13 @@ Add DZL as a Application Entry and Open it as an Application:
 This is automatically done through the <install_DZL.sh> script, but this is how you do it manually:
 \
 \
-1: Copy <DZL.desktop> to /home/$USER/.local/share/applications/ and in the Terminal like this:
+1: Copy <DZL.desktop> to /home/$USER/.local/share/applications/ and in the Terminal:
+\
 cp /home/$USER/DZL-Beta-Linux-main/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
 \
 \
-2: Copy the .png-icon to the </usr/share/icons> folder in the Terminal like this:
+2: Copy the .png-icon to the </usr/share/icons> folder in the Terminal:
+\
 sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 \
@@ -132,7 +134,9 @@ sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 FAQ:
 I can't join the server:
-- Restart Steam if you can't join the server and try again. 
+\
+- Restart Steam if you can't join the server and try again.
+\
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
 \
 \
