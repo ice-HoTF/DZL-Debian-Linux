@@ -29,13 +29,13 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Add folder 'DZL' to your 'home' folder.
+1: Extract 'DZL_Beta_main.zip' to your '/home/$USER' Directory.
 \
 \
-2: Open 'DZL' Folder and Run 'bash DZL.sh' in the terminal.
+2: Run 'sh /home/$USER/DZL/DZL_Installer.sh' in the terminal.
 \
 \
-3: Follow Instructions in the Terminal!
+3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
 \
@@ -97,6 +97,7 @@ FAQ:
 I can't join the server:
 - Restart Steam if you can't join the server and try again. 
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
+\
 \
 \
 \
