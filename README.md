@@ -29,7 +29,7 @@ This script supports modded servers and vanilla servers.
 \
 \
 \
-1: Extract 'DZL_Beta_main.zip' to your '/home/$USER' Directory.
+1: Extract 'DZL-Beta-Linux-main.zip' to your '/home/$USER' Directory.
 \
 \
 2: Run 'sh /home/$USER/DZL/install_DZL.sh' in the terminal.
@@ -97,7 +97,7 @@ cp /home/$USER/DZL/DZL.desktop /home/$USER/.local/share/applications/DZL.desktop
 \
 \
 2: Copy the .png-icon to the '/usr/share/icons' folder in the Terminal like this:
-sudo cp /home/$USER/DZL-Beta-main/DZL/dzl.png /usr/share/icons/
+sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 \
 \
