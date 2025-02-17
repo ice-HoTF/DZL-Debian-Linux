@@ -20,11 +20,14 @@ Replace it with yours.
 \
 \
 **FLATPAK STEAM NOT SUPPORTED!**
+\
 This script only works with the official steam package: https://wiki.debian.org/Steam
 \
 **Dependencies:**
 gawk
+\
 curl
+\
 jq
 \
 \
