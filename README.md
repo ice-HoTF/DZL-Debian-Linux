@@ -215,7 +215,6 @@ sudo cp /home/$USER/DZL-Beta-Linux-main/DZL/dzl.png /usr/share/icons/
 \
 I can't join the server:
 \
-\
 - Restart Steam if you can't join the server and try again.
 - On heavily modded servers, steam once in a while glitches right after downloading the mods and. A steam restart solves it.
 \
