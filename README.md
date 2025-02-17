@@ -32,7 +32,7 @@ This script supports modded servers and vanilla servers.
 1: Extract 'DZL_Beta_main.zip' to your '/home/$USER' Directory.
 \
 \
-2: Run 'sh /home/$USER/DZL/DZL_Installer.sh' in the terminal.
+2: Run 'sh /home/$USER/DZL/install_DZL.sh' in the terminal.
 \
 \
 3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
