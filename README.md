@@ -38,6 +38,7 @@ This script supports modded servers and vanilla servers.
 3: Run DZL by Opening the Application Menu Shortcut 'DZL' or By Terminal Command: bash /home/$USER/DZL/DZL.sh
 \
 \
+https://github.com/user-attachments/assets/f605976b-410e-4446-812d-945717f9bc24
 \
 Join Server:
 \
