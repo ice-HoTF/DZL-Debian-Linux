@@ -462,7 +462,7 @@ submenu2(){
    
     ppath=/home/$USER/DZL/Favorites/
     echo -e "\n
- Choose a filename for the Server Launch Script:
+ Save Favorite As:
  ";
     read fname;	   	   
     echo ""
