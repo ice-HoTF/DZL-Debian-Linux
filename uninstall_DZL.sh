@@ -3,10 +3,13 @@
 ### Uninstall DZL###
 
 sudo rm /home/$USER/.local/share/applications/DZL.desktop 
+echo "Removing DZL.Desktop from '.local/share/applications'"
 sudo rm /usr/share/icons/dzl.png
+echo "Removing dzl.png from 'usr/share/icons'"
 sudo rm -rf /home/$USER/DZL/
-sudo rm -rf /home/$USER/DZL-Beta-Linux-main/
-sudo rm /home/$USER/DZL-Beta-Linux-main.zip
-cd ~
-exec bash
+echo "Removing folder 'DZL' from 'home/$USER/DZL'"
+#cd ~
+#exec bash
 echo "Uninstallation Successful"
+
+
