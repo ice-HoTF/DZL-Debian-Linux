@@ -7,6 +7,9 @@
 
 startmenu() {
 
+# Change max map count or else the game wont lauch at all..
+sudo sysctl -w vm.max_map_count=1048576
+
 unset number
 until [[ $number == +([1-4]) ]] ; do
 
