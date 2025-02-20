@@ -59,9 +59,9 @@ jq
    sh install_DZL.sh
 \
 \
-3: Run DZL by Opening the Application Menu Shortcut <DZL> 
+3: Start DZL by Opening the Application Menu Shortcut <DZL> 
 \
-or Terminal Command: 
+or Start DZL with a Terminal Command: 
 \
 bash /home/$USER/DZL/DZL.sh
 \
