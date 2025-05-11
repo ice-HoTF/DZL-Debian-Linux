@@ -273,12 +273,28 @@ echo "[${SELF}][debug] ${@}"
   fi
 }
 
-check_dir() {
+#check_dir() {
 
-debug "Checking directory: ${1}"
-if [ ! -d "${1}" ] ; then
-mkdir "/home/$USER/.steam/debian-installation/steamapps/workshop/content/221100"
-fi
+#debug "Checking directory: ${1}"
+#if [ ! -d "${1}" ] ; then
+#mkdir "/home/$USER/.steam/steam/steamapps/workshop/content/221100"
+#fi
+#}
+
+check_dir() {
+  debug "Checking system-wide for directory: ${1}"
+
+  # search for an existing dir matching $1 anywhere
+  if find / -type d -path "${1}" -print -quit 2>/dev/null >/dev/null; then
+    debug "Directory found system-wide, skipping creation"
+    return 0
+  fi
+
+  # not found → create it (with parents)
+  mkdir -p "${1}" || {
+    echo "Error: could not create ${1}" >&2
+    return 1
+  }
 }
 
 check_dep() {
