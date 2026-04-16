@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 echo ""
 echo "Searching for Servers.. Please Wait!"
 echo ""
@@ -24,10 +25,10 @@ read -s -n1 -p $'
  1) Setup Server\n
  2) Favorites\n
  3) Options Favorites And Mods\n
- 4) Quit
+ 4) Quit\n
 \n' number
 done
-case ${number} in 
+case ${number} in
 
 ######################################################
 #### Normal Mod Setup Start ##########################
@@ -42,19 +43,19 @@ sleep 0.5
 echo ""
 
 echo -e "\n
- Enter IP-Address:Port"
+ Enter IP-Address:Port\n"
 sleep 0.5
 read SSERVER
 sleep 0.5
 
 echo -e "\n
- Enter Query Port Number"
+ Enter Query Port Number\n"
 sleep 0.5
 read PPORT
 sleep 0.5
 
 echo -e "\n
- Enter Username"
+ Enter Username\n"
 sleep 0.5
 read NNAME
 sleep 0.5;;
@@ -68,7 +69,7 @@ sleep 0.5;;
 
 ######################################################
 #### Menu Options Start      #########################
-######################################################	
+######################################################
 
 [2] )
 
@@ -79,13 +80,16 @@ if [[ -z "$list" ]]; then
     echo ""
     echo "No Favorites Added!"
     echo ""
-    exit
+    main
 fi
 
 echo "Select By Number:"
-select file in $list
+select file in $list "Main Menu"
 do
-    if [ -n "$file" ]; then
+    if [[ "$file" == "Main Menu" ]]; then
+        main
+        return
+    elif [ -n "$file" ]; then
         echo "Launching: $file"
         sh /home/$USER/DZL/Favorites/$file
         break
@@ -97,7 +101,7 @@ done
 exit
 echo ""
 
-startmenu "${dir_dayz}" "${dir_workshop}" || exit 1;; 
+startmenu "${dir_dayz}" "${dir_workshop}" || exit 1;;
 
 
 [3] )
@@ -117,7 +121,7 @@ read -s -n1 -p $'
 \n
  1) Remove A Server From Favorites\n
  2) Remove All Mods\n
- 3) Exit\n
+ 3) Main Menu\n
 \n' number
 done
 
@@ -125,33 +129,34 @@ done
 case $number in
 
 "1") ######################################################################################
-            
+
 rdir="/home/$USER/DZL/Favorites/"
 rlist=$(ls "$rdir")
 if [[ -z "$rlist" ]]; then
     echo ""
     echo "No Favorites Added!"
     echo ""
-    exit
-
+    main
 fi
 
 echo "Select By Number To Delete:"
 select rfile in $rlist
 do
     if [ -n "$rfile" ]; then
+        echo ""
         echo "You deleted: $rfile"
         rm /home/$USER/DZL/Favorites/$rfile
-        exit
+        submenur1
     else
+        echo ""
         echo "Invalid selection"
-        exit
+        submenur1
     fi
 done
 exit
 echo ""
 
-startmenu "${dir_dayz}" "${dir_workshop}" || exit 1;; 
+startmenu "${dir_dayz}" "${dir_workshop}" || exit 1;;
 
 "2") ######################################################################################
 
@@ -164,11 +169,12 @@ read -p $'\n
             sleep 0.1
      	    rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*
 
-exit 1;; 
+main;;
 
 "3") ######################################################################################
 
-    exit;;
+main;;
+#    exit;;
 esac
 
 }
@@ -282,24 +288,14 @@ echo "[${SELF}][debug] ${@}"
 
 #debug "Checking directory: ${1}"
 #if [ ! -d "${1}" ] ; then
-#mkdir "/home/$USER/.steam/steam/steamapps/workshop/content/221100"
+#mkdir "/home/$USER/.steam/debian-installation/steamapps/workshop/content/221100"
 #fi
 #}
 
 check_dir() {
-  debug "Checking system-wide for directory: ${1}"
-
-  # search for an existing dir matching $1 anywhere
-  if find / -type d -path "${1}" -print -quit 2>/dev/null >/dev/null; then
-    debug "Directory found system-wide, skipping creation"
-    return 0
-  fi
-
-  # not found → create it (with parents)
-  mkdir -p "${1}" || {
-    echo "Error: could not create ${1}" >&2
-    return 1
-  }
+    if [[ ! -d "${1}" ]]; then
+        mkdir -p "${1}" || { echo "Error: could not create ${1}" >&2; return 1; }
+    fi
 }
 
 check_dep() {
@@ -332,7 +328,7 @@ resolve_steam() {
     fi
 
     if check_dep steam; then
-    STEAM=steam    
+    STEAM=steam
     fi
 }
 
@@ -347,7 +343,7 @@ query_server_api() {
  Server IP   : $SSERVER
  Query Port  : $PPORT
  UserName    : $NNAME"
- 
+
   query="$(sed -e "s/@ADDRESS@/${SSERVER%:*}/" -e "s/@PPORT@/${PPORT}/" <<< "${API_URL}")"
   debug "Querying ${query}"
   response="$(curl "${API_PARAMS[@]}" "${query}")"
@@ -362,31 +358,31 @@ mainmenu(){
 
 sleep 0.25
 if [ -f "/home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf" ] ; then
-rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf  
+rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf
 fi
 sleep 0.25
 if [ -f "/home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_241100.acf" ] ; then
-rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_241100.acf  
+rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_241100.acf
 fi
 sleep 0.25
 
-missing=0  
+missing=0
 
 unset number
-until [[ $number == +([1-5]) ]] ; do
+until [[ $number == +([1-4]) ]] ; do
 read -s -n1 -p $'
 \n
  1) Join Server\n
  2) Add To Favorites\n
  3) Edit Server Mods (For This Server Only)\n
- 4) Quit
+ 4) Main Menu
 \n' number
 done
 case $number in
     [1])
 	    echo ""
 	    echo -e "\n
- Checking Server Mods .." 
+ Checking Server Mods .."
             sleep 0.25
             rm -rf /home/$USER/.steam/debian-installation/steamapps/workshop/content/downloads/*
             rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*
@@ -396,9 +392,9 @@ case $number in
     ;;
     [3])
     submenu1
-    ;;    
+    ;;
     [4])
-    exit
+    main
     ;;
         *)
         echo "invalid answer, please try again"
@@ -428,27 +424,27 @@ read -p $'\n
  Press Enter to Verify Mods for this Server.
 \n' foo
             sleep 0.25
-            for modid in "${INPUT[@]}"; do  
-	    rm -rf /home/$USER/.steam/debian-installation/steamapps/workshop/content/221100/${modid}            
+            for modid in "${INPUT[@]}"; do
+	    rm -rf /home/$USER/.steam/debian-installation/steamapps/workshop/content/221100/${modid}
 	    rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*
 	    continue
 	   done
             sleep 0.1
             rm -rf /home/$USER/.steam/debian-installation/steamapps/workshop/content/downloads/*
             sleep 0.1
-            rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*        
+            rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*
             sleep 0.1
             if [ -f "/home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf" ] ; then
-            rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf  
+            rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf
             fi
 sleep 0.1;;
 
 "2") ######################################################################################
 
    unset mods2
-   for modid in "${INPUT[@]}"; do  
-    
-    local modpath2="${dir_workshop}/${modid}" 
+   for modid in "${INPUT[@]}"; do
+
+    local modpath2="${dir_workshop}/${modid}"
     local namelink="${modid}"
     MODS2+=("${namelink}")
     local mods2="$(IFS=";" echo "${MODS2[*]}")"
@@ -460,7 +456,7 @@ read -p $'\n
 echo -e "\n
  Mods Deleted:\n ${mods2}\n From Workshop Directory: \n ${dir_workshop}"
             sleep 0.1
-	    for modid in "${INPUT[@]}"; do  
+	    for modid in "${INPUT[@]}"; do
 	    rm -rf /home/$USER/.steam/debian-installation/steamapps/workshop/content/221100/${modid}
 	    continue
 	    done
@@ -468,11 +464,11 @@ echo -e "\n
             sleep 0.1
 	    rm -r -f /home/$USER/.steam/debian-installation/steamapps/common/DayZ/@*
             if [ -f "/home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf" ] ; then
-            rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf  
+            rm /home/$USER/.steam/debian-installation/steamapps/workshop/appworkshop_221100.acf
             fi
 #exit;;
- 
-mainmenu "${dir_dayz}" "${dir_workshop}" || exit 1;; 
+
+mainmenu "${dir_dayz}" "${dir_workshop}" || exit 1;;
 
 "3") ######################################################################################
 
@@ -484,23 +480,23 @@ esac
 }
 
 submenu2(){
-   
+
     ppath=/home/$USER/DZL/Favorites/
     echo -e "\n
  Save Favorite As:
  ";
-    read fname;	   	   
+    read fname;
     echo ""
     unset MODS
-for modid in "${INPUT[@]}"; do 
-    local modlink="@$(dec2base64 "${modid}")" 
-    local modpath="${dir_workshop}/${modid}" 
+for modid in "${INPUT[@]}"; do
+    local modlink="@$(dec2base64 "${modid}")"
+    local modpath="${dir_workshop}/${modid}"
     local modmeta="${modpath}/meta.cpp"
     MODS+=("${modlink}")
     local mods="$(IFS=";"; echo "${MODS[*]}")"
-    local modlink="@$(dec2base64 "${modid}")" 
-    sleep 0.2 
-done	
+    local modlink="@$(dec2base64 "${modid}")"
+    sleep 0.2
+done
 
     cat > $ppath$fname.sh << ENDMASTER
 steam -applaunch 221100 "-mod=$mods" -connect=${SSERVER} --port ${PPORT} -name=${NNAME} -nolauncher -world=empty
@@ -509,7 +505,7 @@ ENDMASTER
  Launch Script Saved In:$ppath$fname.sh";
    echo "";
    echo " This Server Was Added To Favorites";
-echo -e "\n 
+echo -e "\n
  Launch command for this server: \n\n steam -applaunch 221100 \"-mod=$mods\" -connect=$SSERVER --port ${PPORT} -name=${NNAME} -nolauncher -world=empty"
 echo ""
 echo "";
@@ -521,11 +517,11 @@ mods_setup() {
     local dir_dayz="${1}"
     local dir_workshop="${2}"
     unset MODS
-    
-for modid in "${INPUT[@]}"; do 
 
-    local modlink="@$(dec2base64 "${modid}")" 
-    local modpath="${dir_workshop}/${modid}" 
+for modid in "${INPUT[@]}"; do
+
+    local modlink="@$(dec2base64 "${modid}")"
+    local modpath="${dir_workshop}/${modid}"
 
 if ! [[ -d "${modpath}" ]]; then
 
@@ -543,31 +539,29 @@ fi
 done
 
 if (( missing == 1 )); then
-
-   echo -e "\n 
- Please Wait While Steam Download The Mods."
-   sleep 10
-   until [ ! -d "/home/$USER/.steam/debian-installation/steamapps/workshop/temp/221100" ] && sleep 5 && [ ! -d "/home/$USER/.steam/debian-installation/steamapps/workshop/temp/221100" ]; 
-   do
-   echo -e "\n 
- ..Downloading Mods. Please wait.."
-   sleep 10
-   done
-echo ""
-   echo -e "\n 
- Mods Finished Downloading."
+    local acf="$HOME/.steam/steam/steamapps/workshop/appworkshop_221100.acf"
+    echo -e "\n Please Wait While Steam Downloads The Mods."
+    sleep 2
+    until [[ -f "$acf" ]]; do
+        sleep 2
+    done
+    while grep -q '"NeedsDownload"[[:space:]]*"1"' "$acf"; do
+        echo -e "\n ..Downloading Mods. Please wait.."
+        sleep 2
+    done
+    echo -e "\n Mods Finished Downloading."
 fi
     echo ""
     missing=0
     unset MODS
-    for modid in "${INPUT[@]}"; do 
-    local modlink="@$(dec2base64 "${modid}")" 
-    local modpath="${dir_workshop}/${modid}" 
+    for modid in "${INPUT[@]}"; do
+    local modlink="@$(dec2base64 "${modid}")"
+    local modpath="${dir_workshop}/${modid}"
     local modmeta="${modpath}/meta.cpp"
     ln -sr -f "${modpath}" "${dir_dayz}/${modlink}"
     MODS+=("${modlink}")
     local mods="$(IFS=";"; echo "${MODS[*]}")"
-    local modlink="@$(dec2base64 "${modid}")" 
+    local modlink="@$(dec2base64 "${modid}")"
   continue
 
     done
@@ -578,20 +572,24 @@ fi
  Query Port: $PPORT"
     echo ""
 
-   echo -e "\n 
+   echo -e "\n
  Launch command for this server: \n\n steam -applaunch 221100 \"-mod=$mods\" -connect=$SSERVER --port ${PPORT} -name=${NNAME} -nolauncher -world=empty"
 echo ""
 
-read -p $'\n
- Press " Enter " to Launch DayZ And Join The Server
-\n' foo
+#read -p $'\n
+# Press " Enter " to Launch DayZ And Join The Server
+#\n' foo
 
-echo -e "\n
- Starting DayZ.. Please Wait..
-\n";
-
+read -s -n1 -p $'\n Press " Enter " to Launch DayZ or " Esc " to go back to Main Menu\n' foo
+echo ""
+echo ""
+if [[ $foo == $'\e' ]]; then
+    echo -e "\n Going back to Main Menu...\n"
+    main
+    return
+fi
+echo -e "\n Starting DayZ.. Please Wait..\n"
 steam -applaunch 221100 "-mod=$mods" -connect=${SSERVER} --port ${PPORT} -name=${NNAME} -nolauncher -world=empty
-
 echo ""
 exit
 }
@@ -615,6 +613,8 @@ done
 echo ""
 }
 
+trap 'echo -e "\n Exiting...\n"; exit 0' SIGINT SIGTERM
+
 launch_game() {
 read -p $'\n
  Press " Enter " to Launch DayZ And Join The Server
@@ -624,7 +624,7 @@ echo -e "\n
  Starting DayZ.. Please Wait..
 \n";
 steam -applaunch 221100 "-mod=$mods" -connect=${SSERVER} --port ${PPORT} -name=${NNAME} -nolauncher -world=empty
-exit;
+exit 0;
 }
 
 
